@@ -1,7 +1,7 @@
 /*
  *
  * Nodejs Server
- * 
+ *
  */
 
 const http = require('http');
@@ -57,12 +57,10 @@ const server = http.createServer((req, res) => {
   });
 });
 
-server.listen(config.port, () => {
-  console.log(`Server started at port ${config.port}`);  
+server.listen(process.env.PORT || config.port, () => {
+  console.log(`Server started at port ${config.port}`);
 })
 
 const router = {
   'test': handlers.test
 }
-
-
