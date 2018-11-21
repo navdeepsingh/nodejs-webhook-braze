@@ -63,5 +63,6 @@ server.listen(process.env.PORT || config.port, () => {
 
 const router = {
   'test': handlers.test,
-  'sen': handlers.sen
+  'user': handlers.user,
+  'purchase': handlers.purchase,
 }
